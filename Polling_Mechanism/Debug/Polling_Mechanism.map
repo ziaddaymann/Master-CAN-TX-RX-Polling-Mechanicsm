@@ -2050,15 +2050,15 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  *(.text)
  .text          0x000000000800010c       0x40 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.text*)
- .text.can_tx   0x000000000800014c       0x74 ./Core/Src/main.o
+ .text.can_tx   0x000000000800014c       0x70 ./Core/Src/main.o
                 0x000000000800014c                can_tx
  .text.CAN_RX_FILTER_init
-                0x00000000080001c0       0x5c ./Core/Src/main.o
-                0x00000000080001c0                CAN_RX_FILTER_init
- .text.can_rx   0x000000000800021c       0x50 ./Core/Src/main.o
-                0x000000000800021c                can_rx
- .text.main     0x000000000800026c       0x74 ./Core/Src/main.o
-                0x000000000800026c                main
+                0x00000000080001bc       0x5c ./Core/Src/main.o
+                0x00000000080001bc                CAN_RX_FILTER_init
+ .text.can_rx   0x0000000008000218       0x50 ./Core/Src/main.o
+                0x0000000008000218                can_rx
+ .text.main     0x0000000008000268       0x78 ./Core/Src/main.o
+                0x0000000008000268                main
  .text.SystemClock_Config
                 0x00000000080002e0       0x76 ./Core/Src/main.o
                 0x00000000080002e0                SystemClock_Config
@@ -2511,17 +2511,17 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  .debug_macro   0x0000000000015b02      0x1f9 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
  .debug_macro   0x0000000000015cfb      0x1a0 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
 
-.debug_line     0x0000000000000000     0x5955
- .debug_line    0x0000000000000000      0x816 ./Core/Src/main.o
- .debug_line    0x0000000000000816      0x6c7 ./Core/Src/stm32f1xx_hal_msp.o
- .debug_line    0x0000000000000edd      0x736 ./Core/Src/stm32f1xx_it.o
- .debug_line    0x0000000000001613      0x6f2 ./Core/Src/system_stm32f1xx.o
- .debug_line    0x0000000000001d05       0x87 ./Core/Startup/startup_stm32f103c8tx.o
- .debug_line    0x0000000000001d8c      0x91f ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_line    0x00000000000026ab     0x10c0 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.o
- .debug_line    0x000000000000376b      0xb07 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_line    0x0000000000004272      0x9b6 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_line    0x0000000000004c28      0xd2d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+.debug_line     0x0000000000000000     0x5957
+ .debug_line    0x0000000000000000      0x818 ./Core/Src/main.o
+ .debug_line    0x0000000000000818      0x6c7 ./Core/Src/stm32f1xx_hal_msp.o
+ .debug_line    0x0000000000000edf      0x736 ./Core/Src/stm32f1xx_it.o
+ .debug_line    0x0000000000001615      0x6f2 ./Core/Src/system_stm32f1xx.o
+ .debug_line    0x0000000000001d07       0x87 ./Core/Startup/startup_stm32f103c8tx.o
+ .debug_line    0x0000000000001d8e      0x91f ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_line    0x00000000000026ad     0x10c0 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.o
+ .debug_line    0x000000000000376d      0xb07 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_line    0x0000000000004274      0x9b6 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_line    0x0000000000004c2a      0xd2d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
 
 .debug_str      0x0000000000000000    0x7e385
  .debug_str     0x0000000000000000    0x7cf73 ./Core/Src/main.o

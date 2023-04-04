@@ -60,8 +60,7 @@ static void MX_CAN_Init(void);
 
 void can_tx (uint32_t ID , uint8_t DLC , uint8_t* payload)
 {
-	uint32_t pRxMailbox ;
-	uint8_t no_free_txMailbox =0 ;
+	uint8_t pRxMailbox , no_free_txMailbox =0 ;
 	CAN_TxHeaderTypeDef pHeader;
 
 	pHeader.DLC = DLC;
@@ -177,8 +176,7 @@ int main(void)
   uint8_t TX_DATA[8] = {'C', 'A' , 'N' , ' ' , 'N' , 'O' , ':' , ' '};
   uint8_t Frameno = 0;
   uint8_t RX_DATA[8];
-  uint32_t canid;
-  uint8_t candlc;
+  uint16_t canid , candlc;
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */

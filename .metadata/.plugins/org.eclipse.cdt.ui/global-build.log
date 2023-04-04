@@ -62,3 +62,44 @@ Finished building: default.size.stdout
  
 Finished building: Polling_Mechanism.list
  
+16:25:14 **** Incremental Build of configuration Debug for project Polling_Mechanism ****
+make -j3 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'can_tx':
+../Core/Src/main.c:75:59: warning: passing argument 4 of 'HAL_CAN_AddTxMessage' from incompatible pointer type [-Wincompatible-pointer-types]
+   75 |   if ( HAL_CAN_AddTxMessage (&hcan , &pHeader , payload , &pRxMailbox) != HAL_OK)
+      |                                                           ^~~~~~~~~~~
+      |                                                           |
+      |                                                           uint8_t * {aka unsigned char *}
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:258,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h:679:122: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+  679 | HAL_StatusTypeDef HAL_CAN_AddTxMessage(CAN_HandleTypeDef *hcan, CAN_TxHeaderTypeDef *pHeader, uint8_t aData[], uint32_t *pTxMailbox);
+      |                                                                                                                ~~~~~~~~~~^~~~~~~~~~
+arm-none-eabi-gcc -o "Polling_Mechanism.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/ziadayman/Desktop/Master-CAN-TX-RX-Polling-Mechanicsm/Polling_Mechanism/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Polling_Mechanism.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Polling_Mechanism.elf
+ 
+arm-none-eabi-size   Polling_Mechanism.elf 
+arm-none-eabi-objdump -h -S  Polling_Mechanism.elf  > "Polling_Mechanism.list"
+   text	   data	    bss	    dec	    hex	filename
+   7300	     20	   1612	   8932	   22e4	Polling_Mechanism.elf
+Finished building: default.size.stdout
+ 
+Finished building: Polling_Mechanism.list
+ 
+16:26:03 **** Incremental Build of configuration Debug for project Polling_Mechanism ****
+make -j3 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Polling_Mechanism.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/ziadayman/Desktop/Master-CAN-TX-RX-Polling-Mechanicsm/Polling_Mechanism/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Polling_Mechanism.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Polling_Mechanism.elf
+ 
+arm-none-eabi-size   Polling_Mechanism.elf 
+arm-none-eabi-objdump -h -S  Polling_Mechanism.elf  > "Polling_Mechanism.list"
+   text	   data	    bss	    dec	    hex	filename
+   7296	     20	   1612	   8928	   22e0	Polling_Mechanism.elf
+Finished building: default.size.stdout
+ 
+Finished building: Polling_Mechanism.list
+ 
