@@ -184,7 +184,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  TX_DATA[7] = Frameno++;
+	  TX_DATA[8] = Frameno++;
 
 	  can_tx(0x3ff , 8 ,TX_DATA);
 
