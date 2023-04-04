@@ -162,8 +162,6 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_CAN_Init();
-
-  CAN_RX_FILTER_init (0x3FF , 0x7FF);
   /* USER CODE BEGIN 2 */
 
 
@@ -175,8 +173,6 @@ int main(void)
 
   uint8_t TX_DATA[8] = {'C', 'A' , 'N' , ' ' , 'N' , 'O' , ':' , ' '};
   uint8_t Frameno = 0;
-  uint8_t RX_DATA[8];
-  uint16_t canid , candlc;
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -185,9 +181,6 @@ int main(void)
 	  TX_DATA[8] = Frameno++;
 
 	  can_tx(0x3ff , 8 ,TX_DATA);
-
-
-	  can_rx (&canid , &candlc , RX_DATA);
 
     /* USER CODE END WHILE */
 
