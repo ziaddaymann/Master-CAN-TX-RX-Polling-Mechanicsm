@@ -174,9 +174,9 @@ int main(void)
   }
   /* USER CODE END 2 */
 
-  unsigned char TX_DATA[8] = {'C', 'A' , 'N' , ' ' , 'N' , 'O' , ':' , ' '};
+  uint8_t TX_DATA[8] = {'C', 'A' , 'N' , ' ' , 'N' , 'O' , ':' , ' '};
   uint8_t Frameno = 0;
-  unsigned char RX_DATA[8];
+  uint8_t RX_DATA[8];
   uint32_t canid;
   uint8_t candlc;
 
